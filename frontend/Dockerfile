@@ -1,5 +1,10 @@
 # Node version-package we are using to build the application
-FROM  AS builder
+FROM mode:22-alpine AS builder 
+
+WORKDIR /app
+
+COPY package*.json ./
+
 
 # Set up the work directory
 
